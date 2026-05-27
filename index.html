@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>老婆生日快乐！</title>
+    <title>廖敏芝生日快乐！</title>
     <style>
         /* 全局样式重置 */
         * {
@@ -14,7 +14,7 @@
         }
 
         body {
-            background-color: #f4c2e0; /* 淡紫色背景，和你的截图一致 */
+            background-color: #f4c2e0; /* 淡紫色背景 */
             min-height: 100vh;
             overflow-x: hidden;
             position: relative;
@@ -53,13 +53,13 @@
             }
         }
 
-        /* 主内容区（文字和卡片，层级在漂浮元素之上） */
+        /* 主内容区 */
         .content {
             position: relative;
             z-index: 10;
             text-align: center;
             padding: 50px 20px;
-            color: #a8254f; /* 深粉色文字，和截图一致 */
+            color: #a8254f;
         }
 
         /* 主标题 */
@@ -98,15 +98,6 @@
         .card .love-text {
             font-size: 1.1rem;
             margin-bottom: 15px;
-        }
-
-        .card .love-line {
-            font-size: 1.1rem;
-            font-weight: bold;
-            color: #a8254f;
-            text-align: center;
-            margin-top: 20px;
-            font-size: 1.5rem;
         }
 
         /* 邀请函按钮 */
@@ -199,23 +190,22 @@
     </style>
 </head>
 <body>
-    <!-- 动态漂浮元素容器（爱心/蝴蝶/礼物会在这里生成） -->
+    <!-- 动态漂浮元素容器（爱心/蝴蝶/礼物） -->
     <div class="floating-container" id="floatingContainer"></div>
 
     <!-- 主内容区 -->
     <div class="content">
-        <h1 class="title">老婆生日快乐！！</h1>
+        <h1 class="title">廖敏芝生日快乐！！</h1>
         <div class="cake">🎂</div>
         <p class="guide-text">往下拉，有惊喜哦~</p>
 
-        <!-- 表白卡片（和你截图里的文字一致） -->
+        <!-- 表白卡片 -->
         <div class="card">
-            <p class="love-text">老婆这是我陪你过的第一个生日嘿嘿</p>
+            <p class="love-text">廖敏芝，这是我陪你过的第四个生日嘿嘿</p>
             <p class="love-text">我不知道说什么 但是我还是说一点</p>
             <p class="love-text">就是我知道这段时间一直在吵架啥的</p>
             <p class="love-text">就搞得两个人都很累</p>
             <p class="love-text">以后少和你吵架 少惹你生气</p>
-            <p class="love-line">老婆我爱你</p>
         </div>
 
         <!-- 邀请函按钮 -->
@@ -243,42 +233,37 @@
     </div>
 
     <script>
-        // 1. 生成漂浮元素（爱心/蝴蝶/礼物）
+        // 生成漂浮元素（爱心/蝴蝶/礼物）
         const floatingContainer = document.getElementById('floatingContainer');
-        const items = ['❤️', '💖', '💕', '💗', '💝', '🎀', '🎁', '🦋']; // 可自行添加更多emoji
-        const maxItems = 30; // 页面上同时存在的元素数量
+        const items = ['❤️', '💖', '💕', '💗', '💝', '🎀', '🎁', '🦋'];
+        const maxItems = 30;
 
         function createFloatingItem() {
-            // 控制元素数量不超过maxItems
             if (floatingContainer.children.length >= maxItems) return;
 
             const item = document.createElement('div');
             item.classList.add('float-item');
-            // 随机选择一个emoji
             const randomItem = items[Math.floor(Math.random() * items.length)];
             item.textContent = randomItem;
 
-            // 随机设置大小、位置、速度、延迟
-            const size = Math.random() * 30 + 20; // 大小：20-50px
+            const size = Math.random() * 30 + 20;
             item.style.fontSize = `${size}px`;
-            item.style.left = `${Math.random() * 100}%`; // 水平位置：0-100%
-            const duration = Math.random() * 10 + 8; // 动画时长：8-18秒
+            item.style.left = `${Math.random() * 100}%`;
+            const duration = Math.random() * 10 + 8;
             item.style.animationDuration = `${duration}s`;
-            const delay = Math.random() * 5; // 动画延迟：0-5秒
+            const delay = Math.random() * 5;
             item.style.animationDelay = `${delay}s`;
 
             floatingContainer.appendChild(item);
 
-            // 动画结束后移除元素，避免页面卡顿
             setTimeout(() => {
                 item.remove();
             }, (duration + delay) * 1000);
         }
 
-        // 每300ms生成一个新元素
         setInterval(createFloatingItem, 300);
 
-        // 2. 邀请函按钮点击事件（打开刮刮乐弹窗）
+        // 邀请函弹窗交互
         const inviteBtn = document.getElementById('inviteBtn');
         const scratchModal = document.getElementById('scratchModal');
         const closeBtn = document.getElementById('closeBtn');
@@ -287,12 +272,10 @@
             scratchModal.classList.add('show');
         });
 
-        // 关闭弹窗
         closeBtn.addEventListener('click', () => {
             scratchModal.classList.remove('show');
         });
 
-        // 点击弹窗背景也能关闭
         scratchModal.addEventListener('click', (e) => {
             if (e.target === scratchModal) {
                 scratchModal.classList.remove('show');
