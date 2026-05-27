@@ -91,13 +91,13 @@
             max-width: 500px;
             margin: 50px auto;
             text-align: left;
-            line-height: 1.8;
+            line-height: 2.2; /* 加大整体行高 */
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
         .card .love-text {
             font-size: 1.1rem;
-            margin-bottom: 15px;
+            margin-bottom: 18px; /* 加大段落之间间距 */
         }
 
         /* 邀请函按钮 */
@@ -129,7 +129,7 @@
             color: #a8254f;
         }
 
-        /* 刮刮乐弹窗 */
+        /* 邀请函弹窗 */
         .scratch-modal {
             position: fixed;
             top: 0;
@@ -179,7 +179,7 @@
             border-radius: 10px;
             padding: 30px;
             margin: 20px 0;
-            line-height: 2;
+            line-height: 2.2;
             font-size: 1.1rem;
         }
 
@@ -215,20 +215,18 @@
         </div>
     </div>
 
-    <!-- 刮刮乐弹窗 -->
+    <!-- 邀请函弹窗 -->
     <div class="scratch-modal" id="scratchModal">
         <div class="scratch-card">
             <span class="close-btn" id="closeBtn">×</span>
-            <h2 class="scratch-title">🎁 刮刮乐 🎁</h2>
-            <p>用手指刮开银色涂层~</p>
+            <h2 class="scratch-title">邀请函</h2>
             <div class="scratch-content">
-                <p>邀请你</p>
-                <p class="invite-line">明天下午17:00</p>
+                <p>❤️ 邀请你 ❤️</p>
+                <p class="invite-line">明天晚上8:00</p>
                 <p class="invite-line">万象天地</p>
                 <p class="invite-line">XX餐厅</p>
                 <p class="invite-line">共进晚餐 ❤️</p>
             </div>
-            <p>↑ 刮开灰色区域 ↑</p>
         </div>
     </div>
 
