@@ -52,7 +52,6 @@
             position: relative;
             z-index: 10;
             text-align: center;
-            /* 标题靠上布局保留 */
             padding: 120px 20px 1200px;
             color: #a8254f;
         }
@@ -82,7 +81,6 @@
             max-width: 500px;
             margin: 1000px auto;
             text-align: left;
-            /* 卡片内文字间距恢复正常 */
             line-height: 2.2;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
@@ -189,7 +187,6 @@
 
         <p class="guide-text">往下拉，有惊喜哦~</p>
 
-        <!-- 已替换为新文案 -->
         <div class="card">
             <p class="love-text">这是我陪你度过的第四个生日啦</p>
             <p class="love-text">19岁生日快乐！！！</p>
@@ -204,14 +201,15 @@
         </div>
     </div>
 
-    <!-- 邀请函弹窗：已删除第三、四行 -->
+    <!-- 邀请函内容已更新为：邀请你 / 明天晚上8:00 / 共进晚餐 -->
     <div class="scratch-modal" id="scratchModal">
         <div class="scratch-card">
             <span class="close-btn" id="closeBtn">×</span>
             <h2 class="scratch-title">邀请函</h2>
             <div class="scratch-content">
-                <p>❤️ 邀请你 ❤️</p>
+                <p>邀请你</p>
                 <p class="invite-line">明天晚上8:00</p>
+                <p>共进晚餐</p>
             </div>
         </div>
     </div>
@@ -237,7 +235,7 @@
             const delay = Math.random() * 5;
             item.style.animationDelay = `${delay}s`;
 
-            floatingContainer.appendChild(item);
+        floatingContainer.appendChild(item);
 
             setTimeout(() => {
                 item.remove();
