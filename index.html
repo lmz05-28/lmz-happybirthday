@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>廖敏芝生日快乐！</title>
     <style>
-        /* 全局样式重置 */
         * {
             margin: 0;
             padding: 0;
@@ -14,14 +13,12 @@
         }
 
         body {
-            background-color: #f4c2e0; /* 淡紫色背景 */
-            min-height: 100vh;
+            background-color: #f4c2e0;
+            min-height: 2000vh;
             overflow-x: hidden;
             position: relative;
-            padding-bottom: 50px;
         }
 
-        /* 动态漂浮元素容器（爱心/蝴蝶/礼物） */
         .floating-container {
             position: fixed;
             top: 0;
@@ -32,7 +29,6 @@
             z-index: 1;
         }
 
-        /* 漂浮元素通用样式 */
         .float-item {
             position: absolute;
             bottom: -50px;
@@ -41,7 +37,6 @@
             z-index: 1;
         }
 
-        /* 向上漂浮动画 */
         @keyframes floatUp {
             0% {
                 transform: translateY(0) rotate(0deg);
@@ -53,64 +48,60 @@
             }
         }
 
-        /* 主内容区 */
         .content {
             position: relative;
             z-index: 10;
             text-align: center;
-            padding: 50px 20px;
+            /* 标题靠上布局保留 */
+            padding: 120px 20px 1200px;
             color: #a8254f;
         }
 
-        /* 主标题 */
         .title {
             font-size: 3rem;
             font-weight: bold;
-            margin-bottom: 30px;
+            margin-bottom: 350px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
         }
 
-        /* 蛋糕图标 */
         .cake {
             font-size: 5rem;
-            margin: 20px 0;
+            margin: 750px 0;
         }
 
-        /* 引导语 */
         .guide-text {
             font-size: 1.2rem;
-            margin: 30px 0;
+            margin: 900px 0;
             color: #8b1c3a;
         }
 
-        /* 表白卡片 */
         .card {
             background-color: rgba(255,255,255,0.85);
             border-radius: 15px;
-            padding: 30px;
+            padding: 60px 40px;
             max-width: 500px;
-            margin: 50px auto;
+            margin: 1000px auto;
             text-align: left;
-            line-height: 2.2; /* 加大整体行高 */
+            /* 卡片内文字间距恢复正常 */
+            line-height: 2.2;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
         .card .love-text {
             font-size: 1.1rem;
-            margin-bottom: 18px; /* 加大段落之间间距 */
+            margin-bottom: 18px;
         }
 
-        /* 邀请函按钮 */
         .invite-btn {
             background-color: rgba(255,255,255,0.9);
             border: 2px dashed #a8254f;
             border-radius: 15px;
-            padding: 30px;
+            padding: 40px;
             max-width: 300px;
-            margin: 50px auto;
+            margin: 1250px auto;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
         }
 
         .invite-btn:hover {
@@ -118,18 +109,17 @@
             box-shadow: 0 8px 20px rgba(0,0,0,0.15);
         }
 
-        .invite-btn .envelope {
+        .envelope {
             font-size: 3rem;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
         }
 
-        .invite-btn .invite-text {
+        .invite-text {
             font-size: 1.3rem;
             font-weight: bold;
             color: #a8254f;
         }
 
-        /* 邀请函弹窗 */
         .scratch-modal {
             position: fixed;
             top: 0;
@@ -158,7 +148,7 @@
             position: relative;
         }
 
-        .scratch-card .close-btn {
+        .close-btn {
             position: absolute;
             top: 15px;
             right: 15px;
@@ -171,51 +161,50 @@
             font-size: 1.5rem;
             font-weight: bold;
             color: #a8254f;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
 
         .scratch-content {
             background-color: #f8d7e9;
             border-radius: 10px;
-            padding: 30px;
+            padding: 40px 20px;
             margin: 20px 0;
-            line-height: 2.2;
+            line-height: 6.0;
             font-size: 1.1rem;
         }
 
-        .scratch-content .invite-line {
+        .invite-line {
             font-weight: bold;
             color: #a8254f;
         }
     </style>
 </head>
 <body>
-    <!-- 动态漂浮元素容器（爱心/蝴蝶/礼物） -->
     <div class="floating-container" id="floatingContainer"></div>
 
-    <!-- 主内容区 -->
     <div class="content">
         <h1 class="title">廖敏芝生日快乐！！</h1>
+
         <div class="cake">🎂</div>
+
         <p class="guide-text">往下拉，有惊喜哦~</p>
 
-        <!-- 表白卡片 -->
+        <!-- 已替换为新文案 -->
         <div class="card">
-            <p class="love-text">廖敏芝，这是我陪你过的第四个生日嘿嘿</p>
-            <p class="love-text">我不知道说什么 但是我还是说一点</p>
-            <p class="love-text">就是我知道这段时间一直在吵架啥的</p>
-            <p class="love-text">就搞得两个人都很累</p>
-            <p class="love-text">以后少和你吵架 少惹你生气</p>
+            <p class="love-text">这是我陪你度过的第四个生日啦</p>
+            <p class="love-text">19岁生日快乐！！！</p>
+            <p class="love-text">愿你身安体泰，欢欣尝在，平顺无忧，吉祥满盈</p>
+            <p class="love-text">今天一定要多吃一些好吃的哦</p>
+            <p class="love-text">等我明天去找你</p>
         </div>
 
-        <!-- 邀请函按钮 -->
         <div class="invite-btn" id="inviteBtn">
             <div class="envelope">💌</div>
             <p class="invite-text">邀请函<br>点我打开看看~</p>
         </div>
     </div>
 
-    <!-- 邀请函弹窗 -->
+    <!-- 邀请函弹窗：已删除第三、四行 -->
     <div class="scratch-modal" id="scratchModal">
         <div class="scratch-card">
             <span class="close-btn" id="closeBtn">×</span>
@@ -223,15 +212,11 @@
             <div class="scratch-content">
                 <p>❤️ 邀请你 ❤️</p>
                 <p class="invite-line">明天晚上8:00</p>
-                <p class="invite-line">万象天地</p>
-                <p class="invite-line">XX餐厅</p>
-                <p class="invite-line">共进晚餐 ❤️</p>
             </div>
         </div>
     </div>
 
     <script>
-        // 生成漂浮元素（爱心/蝴蝶/礼物）
         const floatingContainer = document.getElementById('floatingContainer');
         const items = ['❤️', '💖', '💕', '💗', '💝', '🎀', '🎁', '🦋'];
         const maxItems = 30;
@@ -261,7 +246,6 @@
 
         setInterval(createFloatingItem, 300);
 
-        // 邀请函弹窗交互
         const inviteBtn = document.getElementById('inviteBtn');
         const scratchModal = document.getElementById('scratchModal');
         const closeBtn = document.getElementById('closeBtn');
